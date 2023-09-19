@@ -22,6 +22,17 @@ void DrawMain()
     for (int x = 50; x < 250; x+=10) {
         Paint(x+5, 0, kColorDarkBlue, kColorBlue);
     }
+    
+    vec2 center = vec2(10, 10);
+    int cr = 100;
+    for(int x = 0; x < 360; x++){
+        for(int y = 0; y < 360; y++){
+            if((x - center.x)*(x - center.x) + (y - center.y)*(y - center.y) == cr*cr){
+                DrawPoint(x, y, kColorRed);
+            }
+        }
+        
+    }
 
     /*
     DrawText("Hello, world!!", -12*14/2, 44, kColorWhite);
